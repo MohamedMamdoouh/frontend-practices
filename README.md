@@ -1,43 +1,16 @@
-# Frontend Development Repository
+# Frontend Practices
 
-Comprehensive collection of frontend learning materials and projects covering HTML, CSS, JavaScript, TypeScript, Bootstrap and Angular.
+Repository of frontend learning examples and mini-projects across HTML, CSS, JavaScript, TypeScript, Bootstrap, and Angular.
 
-## 📁 Structure
+## Structure
 
-### Practises/
+- **angular/** - Angular demo apps and unit testing examples
+- **bootstrap/** - Bootstrap responsive layout and component examples
+- **css/** - CSS topic examples including layout, animation, and responsive patterns
+- **html/** - HTML markup examples and semantic structure pages
+- **javascript/** - JavaScript practice examples, API usage, and Jest tests
+- **typescript/** - TypeScript examples, compiler config, and sample source files
 
-Organized learning materials by technology:
+## Usage
 
-- **Angular/** - Angular framework learning
-- **Bootstrap/** - Bootstrap CSS framework
-- **CSS/** - CSS techniques and best practices
-- **HTML/** - HTML markup and semantics
-- **Jest/** - JavaScript testing framework
-- **JS (Elzero)/** - JavaScript fundamentals from Elzero course
-- **JS (PA)/** - JavaScript practical applications from Programming Advices course
-- **Typescript/** - TypeScript language and features
-
-### Projects/
-
-Complete project implementations:
-
-- **HTML & CSS Projects/** - Static sites and UI components
-- **JS Projects/** - Dynamic JavaScript applications
-
-## 🎯 Technologies
-
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- TypeScript
-- Angular Framework
-- Bootstrap Framework
-- Jest Testing
-
-## 📖 Usage
-
-Explore by technology area. Each folder contains examples, tutorials, and complete projects with their own documentation.
-
----
-
-See individual project READMEs for specific setup and running instructions.
+Open the folder for the technology you want to explore. Each folder contains sample code and demo pages with focused examples.

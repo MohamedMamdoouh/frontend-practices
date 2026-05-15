@@ -1,88 +1,12 @@
-# Jest Testing Framework
+# Jest Examples
 
-JavaScript testing framework for unit testing, integration testing, and test-driven development.
+This folder contains example Jest tests and patterns for JavaScript unit testing.
 
-## 📁 Topics
+## Contents
 
-### Test Basics
+- Test files using Jest for assertions, mocks, and async behavior
+- Example suites demonstrating common matchers and test organization
 
-- Test suites (describe blocks)
-- Test cases (it/test blocks)
-- Assertions and matchers
-- Test organization
-- Setup and teardown
+## Usage
 
-### Matchers
-
-- Equality matchers (toBe, toEqual)
-- Truthiness matchers (toBeNull, toBeDefined)
-- Number matchers (toBeGreaterThan, toBeCloseTo)
-- String matchers (toMatch)
-- Array matchers (toContain, toHaveLength)
-
-### Async Testing
-
-- Promises and .resolves/.rejects
-- Async/await in tests
-- Timeouts and done callbacks
-- Real API testing
-
-### Mocking
-
-- Jest mocks and stubs
-- Mock functions
-- Module mocking
-- Timer mocks
-- Snapshot testing
-
-### Coverage
-
-- Code coverage analysis
-- Coverage reports
-- Coverage thresholds
-- Branches and line coverage
-
-## 🎯 Testing Concepts
-
-- Arrange-Act-Assert pattern
-- Test isolation
-- Unit vs. integration tests
-- Mock vs. spy vs. stub
-- Test-driven development (TDD)
-
-## 🛠️ Technologies
-
-- Jest framework
-- Node.js
-- npm
-- JavaScript/TypeScript
-
-## 📖 Structure
-
-```
-__tests__/
-├── unit/           - Unit test files
-├── integration/    - Integration tests
-└── fixtures/       - Test data and mocks
-```
-
-## 🚀 Quick Start
-
-```bash
-# Install Jest
-npm install --save-dev jest
-
-# Create test file: example.test.js
-# Run tests
-npm test
-```
-
-## 💡 Best Practices
-
-- Descriptive test names
-- One concept per test
-- Avoid test interdependence
-- Mock external dependencies
-- Use AAA pattern
-- Maintain test code quality
-- Aim for meaningful coverage
+Run tests from the `javascript/Jest` folder after installing dependencies. Use this folder to explore Jest test structure and best practices.

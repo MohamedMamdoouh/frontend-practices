@@ -1,69 +1,14 @@
-# CSS Learning & Practice
+# CSS Examples
 
-Comprehensive CSS styling covering layouts, responsive design, animations, and best practices.
+Collection of CSS examples covering layout, responsive design, transitions, and visual styling.
 
-## 📁 Topics
+## Contents
 
-### Core CSS
+- Example pages organized by CSS topic
+- Layouts using Flexbox and Grid
+- Animation, transitions, backgrounds, and responsive patterns
+- Utility and styling demonstrations
 
-- Selectors and specificity
-- Box model
-- Display and positioning
-- Floats and clearfix
+## Notes
 
-### Modern Layouts
-
-- Flexbox
-- CSS Grid
-- Responsive design
-- Media queries
-
-### Styling Techniques
-
-- Colors and backgrounds
-- Typography
-- Borders and shadows
-- Transitions and animations
-
-### Advanced Topics
-
-- CSS custom properties (variables)
-- Preprocessors (SASS/SCSS)
-- CSS frameworks
-- Performance optimization
-
-## 🎯 Key Concepts
-
-- Cascade and inheritance
-- Specificity rules
-- Responsive design approaches
-- Mobile-first design
-- Accessibility in styling
-
-## 🛠️ Technologies
-
-- CSS3
-- Flexbox
-- CSS Grid
-- Media queries
-- CSS animations
-- CSS variables
-
-## 📖 Contents
-
-Examples demonstrate:
-
-- Layout techniques
-- Responsive patterns
-- Animation implementations
-- Best practices
-- Cross-browser compatibility
-
-## 💡 Best Practices
-
-- Mobile-first approach
-- Use semantic class names
-- Avoid !important
-- Organize CSS logically
-- Document complex styles
-- Optimize for performance
+Open the files in `css/` to examine CSS techniques and page behavior examples.
