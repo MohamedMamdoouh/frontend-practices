@@ -1,0 +1,8 @@
+<h2>{{ myStore.name }}</h2>
+<img src="{{ myStore.igmUrl }}" alt="{{ myStore.name }}" />
+
+<ul>
+  @for (branch of myStore.branches; track branch) {
+    <li>{{ branch }}</li>
+  }
+</ul>

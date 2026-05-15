@@ -1,0 +1,22 @@
+{
+  "name": "jest_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "Mohamed Mamdouh",
+  "license": "ISC",
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "html"
+    ],
+    "coverageDirectory": "reports",
+    "collectCoverageFrom": [
+      "**/*.{js}"
+    ]
+  },
+  "//": "this is a comment"
+}

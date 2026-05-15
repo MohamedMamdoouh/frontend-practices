@@ -1,0 +1,6 @@
+<!-- <h4>counter(with subscribe manually) = {{ count }}</h4> -->
+<h4>counter = {{ counter | async }}</h4>
+
+<button class="btn btn-success m-2" (click)="increaseCounterValue()">+</button>
+
+<button class="btn btn-danger m-2" (click)="decreaseCounterValue()">-</button>

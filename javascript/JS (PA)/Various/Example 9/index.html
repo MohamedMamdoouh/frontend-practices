@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Tab Testing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Application Tab Testing</h1>
+      <p>
+        Open Dev Tools (F12 → Application tab) to inspect browser storage. This
+        demo shows:
+      </p>
+      <ul>
+        <li><strong>LocalStorage:</strong> Persistent data across sessions</li>
+        <li>
+          <strong>SessionStorage:</strong> Data persists while tab is open
+        </li>
+        <li><strong>Cookies:</strong> HTTP cookies with expiration</li>
+        <li><strong>IndexedDB:</strong> Large-scale client-side storage</li>
+      </ul>
+
+      <div class="demo-section">
+        <h2>LocalStorage</h2>
+        <p>Data persists even after closing the browser</p>
+        <div class="button-group">
+          <button id="btn-set-local">Set LocalStorage</button>
+          <button id="btn-get-local">Get LocalStorage</button>
+          <button id="btn-clear-local">Clear LocalStorage</button>
+        </div>
+        <div id="local-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>SessionStorage</h2>
+        <p>Data persists only while the tab is open</p>
+        <div class="button-group">
+          <button id="btn-set-session">Set SessionStorage</button>
+          <button id="btn-get-session">Get SessionStorage</button>
+          <button id="btn-clear-session">Clear SessionStorage</button>
+        </div>
+        <div id="session-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>Cookies</h2>
+        <p>Small data files stored on client side</p>
+        <div class="button-group">
+          <button id="btn-set-cookie">Set Cookies</button>
+          <button id="btn-view-cookie">View Cookies</button>
+          <button id="btn-clear-cookie">Clear Cookies</button>
+        </div>
+        <div id="cookie-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>IndexedDB</h2>
+        <p>Large-scale structured data storage with indexing</p>
+        <div class="button-group">
+          <button id="btn-add-indexed">Add Records to IndexedDB</button>
+          <button id="btn-get-indexed">Get All Records</button>
+          <button id="btn-query-indexed">Query by ID</button>
+          <button id="btn-clear-indexed">Clear IndexedDB</button>
+        </div>
+        <div id="indexed-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>User Registration (Duplicate Validation)</h2>
+        <p>Register new users with duplicate email/username detection</p>
+
+        <form id="registration-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+              required
+            />
+            <span id="username-error" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter email" required />
+            <span id="email-error" class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input
+              type="number"
+              id="age"
+              placeholder="Enter age"
+              required
+              min="18"
+              max="100"
+            />
+            <span id="age-error" class="error-message"></span>
+          </div>
+
+          <button type="submit" id="btn-register">Register User</button>
+        </form>
+        <div id="registration-output" class="output-box"></div>
+      </div>
+    </div>
+  </body>
+</html>

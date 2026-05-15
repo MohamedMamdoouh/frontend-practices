@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Margin Collapse - Adjacent Siblings</title>
+    <style>
+        p {
+            background-color: #e0f7fa;
+            border: 1px solid #00796b;
+            margin: 30px 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Margin Collapse: Adjacent Siblings</h1>
+    <p>This is the first paragraph with a 30px bottom margin.</p>
+    <p>This is the second paragraph with a 30px top margin.
+        <br>
+        Note: Instead of having 60px between the paragraphs (30px from each), the margins collapse to 30px.
+    </p>
+</body>
+
+</html>

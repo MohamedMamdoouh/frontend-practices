@@ -1,0 +1,97 @@
+body {
+  font-family: system-ui, Arial;
+  margin: 0;
+  padding: 24px;
+  background: #0b1020;
+  color: #e9eefc;
+}
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 16px;
+}
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  background: #4f7cff;
+  color: white;
+  font-weight: 600;
+}
+button.secondary {
+  background: rgba(255, 255, 255, 0.12);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.user {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.muted {
+  opacity: 0.75;
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: white;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 12px 14px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  display: none;
+}
+
+h2 {
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+#error {
+  margin-top: 12px;
+  display: none;
+}

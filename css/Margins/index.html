@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Margin Example</title>
+    <style>
+        .allSides {
+            background-color: #f0f8ff;
+            border: 1px solid #ccc;
+            /* Applies on all sides*/
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .container {
+            background-color: #f0f8ff;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+            padding: 10px;
+        }
+
+        .two-values {
+            /* 10px top and bottom, 30px left and right */
+            margin: 10px 30px;
+            background-color: #e8f5e9;
+            padding: 10px;
+        }
+
+        .three-values {
+            margin: 5px 15px 25px;
+            /* 5px top, 15px left/right, 25px bottom */
+            background-color: #e3f2fd;
+            padding: 10px;
+        }
+
+        .negative-margin {
+            margin: -10px;
+            background-color: #ffebee;
+            padding: 10px;
+        }
+
+        .centered-margin {
+            width: 50%;
+            margin: 20px auto;
+            background-color: #fff3e0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="allSides">This div has a 20px margin on all sides.</p>
+    <p class="container">This div has a 20px margin on all sides.</p>
+    <p class="two-values">This div has a 20px margin on top and bottom, and 30px on left and right.</p>
+    <p class="three-values">This div has a 5px margin on top, 15px on left and right, and 25px on bottom.</p>
+    <p class="negative-margin">This div has a negative margin of -10px on all sides.</p>
+    <p class="centered-margin">This div has a centered margin.</p>
+</body>
+
+</html>

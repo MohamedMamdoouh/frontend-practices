@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IndexedDB CRUD Operations</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>IndexedDB CRUD Operations</h1>
+
+      <div class="form-container">
+        <div class="operation-selector">
+          <h3>Select Operation</h3>
+          <div class="radio-group">
+            <label><input type="radio" name="operation" value="add" checked> Add User</label>
+            <label><input type="radio" name="operation" value="read"> Read User</label>
+            <label><input type="radio" name="operation" value="update"> Update User</label>
+            <label><input type="radio" name="operation" value="delete"> Delete User</label>
+          </div>
+        </div>
+
+        <div class="input-group" id="id-group">
+          <label for="id">ID:</label>
+          <input type="number" id="id" placeholder="Enter ID" />
+        </div>
+
+        <div class="input-group" id="username-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" placeholder="Enter username" />
+        </div>
+
+        <div class="input-group" id="age-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" placeholder="Enter age" />
+        </div>
+
+        <div class="button-group">
+          <button id="execute-btn">Execute Operation</button>
+          <button id="clear-btn">Clear Form</button>
+        </div>
+      </div>
+
+      <div class="debug-container">
+        <h2>Debug Information</h2>
+        <div id="debug-output"></div>
+      </div>
+    </div>
+  </body>
+</html>

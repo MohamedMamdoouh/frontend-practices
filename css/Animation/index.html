@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animations Combined Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+            color: #333;
+            padding: 2rem;
+            max-width: 600px;
+            margin: auto;
+            line-height: 1.4;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #3498db;
+            margin: 1rem auto;
+
+            animation-name: bounce;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-play-state: running;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-100px);
+            }
+        }
+
+        .fade-text {
+            font-size: 2rem;
+            text-align: center;
+            margin: 1rem auto;
+            animation: fade 3s ease-in-out infinite alternate both running;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 5px solid #eee;
+            border-top-color: #3498db;
+            border-radius: 50%;
+            margin: 1rem auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .pulse-btn-container {
+            text-align: center;
+        }
+
+        .pulse-btn {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+            outline: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            75% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animations Demo</h1>
+
+    <section>
+        <h2>1. Bouncing Ball</h2>
+        <div class="ball"></div>
+    </section>
+
+    <section>
+        <h2>2. Fading Text</h2>
+        <div class="fade-text">Hello, CSS Animations!</div>
+    </section>
+
+    <section>
+        <h2>3. Spinning Loader</h2>
+        <div class="spinner"></div>
+    </section>
+
+    <section class="pulse-btn-container">
+        <h2>4. Pulsing Button</h2>
+        <p>This button continuously pulses using a CSS keyframe animation.</p><br>
+        <button class="pulse-btn">Pulse</button>
+    </section>
+
+</body>
+
+</html>

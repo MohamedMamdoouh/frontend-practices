@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display: block, inline, inline-block Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 1rem;
+            line-height: 1.5;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        .demo-block {
+            display: block;
+            background: #cce5ff;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-inline {
+            display: inline;
+            background: #d4edda;
+            padding: 0.2rem 0.4rem;
+        }
+
+        .demo-inline-block {
+            display: inline-block;
+            width: 120px;
+            height: 60px;
+            background: #f8d7da;
+            margin: 0.5rem;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        p.note {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS display Basics</h1>
+
+    <section>
+        <h2>1. <code>display: block</code> 🚀</h2>
+        <div class="demo-block">I am a block-level box.</div>
+        <div class="demo-block">I start on a new line and stretch full width.</div>
+        <p class="note">Notice how each block sits below the previous one.</p>
+    </section>
+
+    <section>
+        <h2>2. <code>display: inline</code> 🌊</h2>
+        <span class="demo-inline">I am inline</span>
+        <span class="demo-inline">so I flow side by side</span>
+        <span class="demo-inline">with no forced line breaks.</span>
+        <p class="note">Try resizing the window—the inline elements only wrap at whitespace.</p>
+    </section>
+
+    <section>
+        <h2>3. <code>display: inline-block</code> 🔗</h2>
+        <div class="demo-inline-block">Box A</div>
+        <div class="demo-inline-block">Box B</div>
+        <div class="demo-inline-block">Box C</div>
+        <p class="note">These behave like inline text but accept width/height styling.</p>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

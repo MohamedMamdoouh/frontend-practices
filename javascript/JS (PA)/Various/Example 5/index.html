@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breakpoint & Stepping Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Breakpoint & Stepping Demo</h1>
+      <p>Open Dev Tools (F12) and explore the following functions by:</p>
+      <ul>
+        <li>Setting breakpoints (click line numbers in Sources tab)</li>
+        <li>Using Step Over (F10), Step Into (F11), Step Out (Shift+F11)</li>
+        <li>Setting conditional breakpoints (right-click line number)</li>
+      </ul>
+
+      <div class="button-group">
+        <button id="btn-simple">Simple Function</button>
+        <button id="btn-loop">Loop with Conditional</button>
+        <button id="btn-nested">Nested Functions</button>
+        <button id="btn-array">Array Operations</button>
+        <button id="btn-object">Object Manipulation</button>
+      </div>
+
+      <div id="output"></div>
+    </div>
+  </body>
+</html>

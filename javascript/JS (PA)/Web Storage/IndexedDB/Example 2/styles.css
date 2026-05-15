@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  background: #0b0b0b;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: rgba(20, 20, 20, 0.75);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  background: rgba(30, 30, 30, 0.5);
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #3e8ef7;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#clear-btn {
+  background: #555;
+}
+
+button:hover {
+  background: #3374c7;
+}
+
+.log {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(40, 40, 40, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  font-size: 15px;
+}
+
+th {
+  background: rgba(70, 70, 70, 0.6);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.section-title {
+  margin: 20px 0 10px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 5px;
+}
+
+.filter-section {
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-controls input {
+  flex: 1;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+}
+
+#apply-filters-btn {
+  background: #28a745;
+}
+
+#reset-filters-btn {
+  background: #dc3545;
+}
+
+#apply-filters-btn:hover {
+  background: #218838;
+}
+
+#reset-filters-btn:hover {
+  background: #c82333;
+}

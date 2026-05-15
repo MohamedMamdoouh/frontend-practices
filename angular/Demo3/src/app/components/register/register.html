@@ -1,0 +1,164 @@
+<h3>{{ userRegisterForm.value | json }}</h3>
+
+<form [formGroup]="userRegisterForm">
+  <div class="mb-3">
+    <label for="inputName" class="form-label">Name</label>
+    <input type="text" class="form-control" id="inputName" name="name" formControlName="name" />
+  </div>
+  @if (name?.touched && name?.invalid) {
+    <div class="text-danger">
+      <!-- @if (userRegisterForm.get('name')?.errors?.['required']) {
+      Name is required.
+    } -->
+      @if (name?.errors?.['required']) {
+        Name is required.
+      }
+    </div>
+  }
+  <div class="mb-3">
+    <label for="inputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="inputEmail1"
+      name="email"
+      formControlName="email"
+      aria-describedby="emailHelp"
+    />
+
+    @if (email?.touched && email?.invalid) {
+      <div class="text-danger">
+        <!-- @if (userRegisterForm.get('email')?.errors?.['required']) {
+        Email is required.
+      }
+      @if (userRegisterForm.get('email')?.errors?.['email']) {
+        Invalid email format.
+      } -->
+        @if (email?.errors?.['required']) {
+          Email is required.
+        }
+        @if (email?.errors?.['email']) {
+          Invalid email format.
+        }
+      </div>
+    }
+  </div>
+
+  <div class="mb-3">
+    <label for="inputPassword" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="inputPassword"
+      name="password"
+      formControlName="password"
+    />
+
+    @if (password?.touched && password?.invalid) {
+      <div class="text-danger">
+        <!-- @if (userRegisterForm.get('password')?.errors?.['required']) {
+        Password is required.
+      }
+      @if (userRegisterForm.get('password')?.errors?.['minlength']) {
+        Password must be at least 6 characters long.
+      } -->
+        @if (password?.errors?.['required']) {
+          Password is required.
+        }
+        @if (password?.errors?.['minlength']) {
+          Password must be at least 6 characters long.
+        }
+      </div>
+    }
+  </div>
+
+  <div class="mb-3" formGroupName="address">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity" name="city" formControlName="city" />
+  </div>
+
+  @if (city?.touched && city?.invalid) {
+    <div class="text-danger">
+      <!-- @if (userRegisterForm.get('address.city')?.errors?.['required']) {
+      City is required.
+    } -->
+      @if (city?.errors?.['required']) {
+        City is required.
+      }
+    </div>
+  }
+
+  <div class="mb-3" formGroupName="address">
+    <label for="inputStreet" class="form-label">Street</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputStreet"
+      name="street"
+      formControlName="street"
+    />
+  </div>
+
+  @if (street?.touched && street?.invalid) {
+    <div class="text-danger">
+      <!-- @if (userRegisterForm.get('address.street')?.errors?.['required']) {
+      Street is required.
+    } -->
+      @if (street?.errors?.['required']) {
+        Street is required.
+      }
+    </div>
+  }
+
+  <div formArrayName="phoneNumber">
+    @for (control of phoneNumbers.controls; track $index; let i = $index) {
+      <div class="mb-3">
+        <label for="inputPhoneNumber-{{ i }}" class="form-label">Phone Number</label>
+        <input
+          type="tel"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          class="form-control"
+          id="inputPhoneNumber-{{ i }}"
+          name="phoneNumber"
+          [formControlName]="i"
+        />
+      </div>
+
+      @if (control.touched && control.invalid) {
+        <div class="text-danger">
+          @if (control.errors?.['required']) {
+            Phone number is required.
+          }
+          @if (control.errors?.['pattern']) {
+            Phone number must be 10 digits.
+          }
+        </div>
+      }
+    }
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary m-2"
+    [disabled]="!userRegisterForm.valid"
+    (click)="submit()"
+  >
+    Submit
+  </button>
+
+  <button
+    class="btn btn-success m-2"
+    (click)="addPhoneNumberInput()"
+    [disabled]="phoneNumbers.length >= 3"
+  >
+    +
+  </button>
+
+  <button
+    class="btn btn-danger"
+    (click)="removePhoneNumberInput()"
+    [disabled]="phoneNumbers.length <= 1"
+  >
+    -
+  </button>
+</form>

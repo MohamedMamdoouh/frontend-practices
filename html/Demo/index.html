@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="font-size:x-large; color: red;">h1: Main Title</h1>
+        <h2 style="font-size: large; color: blue;">h2: this sub title</h2>
+        <h3>sub sub title => h3</h3>
+        <h4>with h4</h4>
+        <h5>that's h5</h5>
+        <h5>last with h6</h5>
+
+        <p style="font-size: x-large; color: blue;">hi this is paragraph test</p>
+        <p style="font-size: 20px;">hi again, I am Mohamed!!</p>
+
+        <p style="font-size: 25px; color:darkblue;">hi using br <br> another new line <br> </p>
+
+        <pre style="font-size: 20px; color: brown;">this is preformatted text              for test</pre>
+        <pre style="font-size: 20px; color:green;">hi guys
+        space here, look !! </pre>
+
+        <p>hi this is horizontal rule</p>
+        <hr>
+        <p style="font-size: 20px;">hi this is second horizontal rule</p>
+        <hr style="background-color: red; height: 10px;">
+        <!--hey, this is a comment-->
+        <p>this is a <span style="font-size: 30px; color: red;">red</span> word in sentence </p>
+        <p>this is <span style="color: darkblue; font-size: 25px;"> spanned</span> word</p>
+        <br>
+
+        <p>using div for layout</p>
+        <div id="layout" style="background-color: gray; color:white; padding: 20px; text-align: center;">
+        </div>
+
+        <!-- this is a comment -->
+        <p>this is div for header</p>
+        <div id="header" style="background-color: coral ;padding:15px;"></div>
+        <br>
+
+        <div id="footer" style="background-color: black; color:white; padding: 15px; text-align: center;">
+            footer information here</div>
+
+        <div>
+            <p>hi this is div for <b>bold</b> and <strong>strong</strong></p>
+        </div>
+
+        <div>
+            <p>this is <em style="color: red;">emphasized</em> word and this is <i style="color: red;">italic</i> word
+            </p>
+        </div>
+
+        <div style="font-size: 25px;">
+            <p>words with underline marks should be replaced with italic words <br>
+                this is mistake, this is <u style="color: red;">underline</u> word</p>
+        </div>
+
+        <div style="font-size: 25px;">
+            <p>this is <small style="color: gray;">word</small> with less importance</p>
+        </div>
+
+        <p style="font-size: 25px;">this is marked <mark>word</mark> with yellow</p>
+        <p style="font-size: 25px;">this is marked <mark style="background-color: red;">word</mark> with red</p>
+
+        <p style="font-size: 25px;">the price was <del>30$</del> and now is <ins>25$</ins></p>
+        <p style="font-size: 25px;">we are <del>gathering</del> <ins>hiring</ins> people</p>
+
+        <div style="font-size: 25px;">
+            <p>water is chemically represented by: H<sub>2</sub>O</p>
+            <p>We got <strong>1</strong><sup>st</sup> place in our competition</p>
+        </div>
+    </div>
+    <div>
+        <h1>this is images example</h1>
+        <img src="Images/Mohamed.JPEG" alt="Mohamed" title="this is my photo" style="width:10%; height:auto;">
+        <img src="Images/Logo.png" alt="PA logo" title="this is PA logo" width="50" height="50">
+        <img src="Images/Logo.png" alt="PA logo" title="this is PA logo" width="25" height="25">
+        <img src="Images/notfound.png" alt="test" title="this is photo doesn't exist" width="25" height="25">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="test"
+            title="image from internet" width="25" height="25">
+    </div>
+    <div>
+        <!--this is not lazy loaded (eager) => essential images-->
+        <img src="Images/5 (1).jpeg" alt="test1" loading="eager" style="width: 35%; height: auto;">
+        <img src="Images/5 (12).JPG" alt="test2" loading="eager" style="width: 35%; height: auto;">
+
+        <img src="Images/5 (209).jpg" alt="test3" loading="lazy" style="width: 35%; height: auto;">
+        <img src="Images/5 (210).jpg" alt="test4" loading="lazy" style="width: 35%; height: auto;">
+        <img src="Images/5 (211).jpg" alt="test4" loading="lazy" style="width: 35%; height: auto;">
+        <img src="Images/5 (212).jpg" alt="test5" loading="lazy" style="width: 35%; height: auto;">
+        <img src="Images/5 (214).jpg" alt="test6" loading="lazy" style="width: 35%; height: auto;">
+        <img src="Images/5 (217).jpg" alt="test7" loading="lazy" style="width: 35%; height: auto;">
+        <img src="Images/5 (24).jpeg" alt="test8" loading="lazy" style="width: 35%; height: auto;">
+        <img src="Images/5 (31).jpeg" alt="test9" loading="lazy" style="width: 35%; height: auto;">
+
+        <!--this is auto loaded (default load)-->
+        <img src="Images/5 (29).jpeg" alt="test11" loading="auto" style="width: 35%; height: auto;">
+    </div>
+    <div>
+        <img src="images/Default-Image.jpg" srcset="images/large-image.jpg 1500w,
+        images/medium-image.jpg 1000w,
+        images/small-image.jpg 500w" sizes="(max-width: 600px) 480px,
+        (max-width: 900px) 800px,
+        1200px" alt="Responsive">
+    </div>
+</body>
+
+</html>

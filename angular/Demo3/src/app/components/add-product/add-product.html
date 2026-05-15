@@ -1,0 +1,141 @@
+<!-- <h3>Product object (as json): {{ newProduct | json }}</h3> -->
+
+<div class="container-fluid p-5 bg-light">
+  <h2 class="mb-4">{{ isEditMode ? 'Edit Product' : 'Add Product' }}</h2>
+  <form (submit)="addNewProduct()" #addProductForm="ngForm">
+    <!-- Name -->
+    <div class="mb-4">
+      <label for="name" class="form-label">Name:</label>
+      <input
+        #productName="ngModel"
+        required
+        pattern="^[a-zA-Z]{3,15}$"
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="newProduct.name"
+        name="name"
+      />
+      <div class="text-danger">
+        @if (productName.invalid && productName.touched) {
+          @if (productName.errors?.['required']) {
+            <div>Name is required.</div>
+          }
+          @if (productName.errors?.['pattern']) {
+            <div>Name must be 3-15 characters long and contain only letters.</div>
+          }
+        }
+      </div>
+    </div>
+
+    <!-- Price -->
+    <div class="mb-4">
+      <label for="price" class="form-label">Price:</label>
+      <input
+        #priceInput="ngModel"
+        required
+        min="1"
+        max="100000"
+        type="number"
+        class="form-control"
+        id="price"
+        [(ngModel)]="newProduct.price"
+        name="price"
+      />
+      <div class="text-danger">
+        @if (priceInput.invalid && priceInput.touched) {
+          @if (priceInput.errors?.['required']) {
+            <div>Price is required.</div>
+          }
+          @if (priceInput.errors?.['min']) {
+            <div>Price must be at least 1.</div>
+          }
+          @if (priceInput.errors?.['max']) {
+            <div>Price cannot exceed 100000.</div>
+          }
+        }
+      </div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="mb-4">
+      <label for="quantity" class="form-label">Quantity:</label>
+      <input
+        #quantityInput="ngModel"
+        required
+        min="1"
+        max="100"
+        type="number"
+        class="form-control"
+        id="quantity"
+        [(ngModel)]="newProduct.quantity"
+        name="quantity"
+      />
+      <div class="text-danger">
+        @if (quantityInput.invalid && quantityInput.touched) {
+          @if (quantityInput.errors?.['required']) {
+            <div>Quantity is required.</div>
+          }
+          @if (quantityInput.errors?.['min']) {
+            <div>Quantity must be at least 1.</div>
+          }
+          @if (quantityInput.errors?.['max']) {
+            <div>Quantity cannot exceed 100.</div>
+          }
+        }
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="mb-4">
+      <label for="image" class="form-label">Image:</label>
+      <input
+        #imageInput="ngModel"
+        required
+        type="file"
+        class="form-control"
+        id="image"
+        [(ngModel)]="newProduct.imageUrl"
+        name="image"
+      />
+      <div class="text-danger">
+        @if (imageInput.invalid && imageInput.touched) {
+          @if (imageInput.errors?.['required']) {
+            <div>Image is required.</div>
+          }
+        }
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="mb-3">
+      <label for="category" class="form-label">Categories</label>
+
+      <select
+        #categorySelect="ngModel"
+        required
+        class="form-select"
+        id="category"
+        [(ngModel)]="newProduct.categoryId"
+        name="category"
+      >
+        <option selected>Laptops</option>
+        @for (category of categories; track category.id) {
+          <option value="{{ category.id }}">{{ category.name }}</option>
+        }
+      </select>
+      <div class="text-danger">
+        @if (categorySelect.invalid && categorySelect.touched) {
+          @if (categorySelect.errors?.['required']) {
+            <div>Category is required.</div>
+          }
+        }
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary" [disabled]="addProductForm.invalid">
+      {{ isEditMode ? 'Update Product' : 'Add Product' }}
+    </button>
+  </form>
+</div>

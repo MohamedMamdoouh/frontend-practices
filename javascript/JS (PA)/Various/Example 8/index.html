@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Network Tab Debugging Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Network Tab Debugging Demo</h1>
+      <p>
+        Open Dev Tools (F12 → Network tab) to inspect all network activity. The
+        Network tab shows:
+      </p>
+      <ul>
+        <li><strong>Request Methods:</strong> GET, POST, PUT, DELETE, PATCH</li>
+        <li>
+          <strong>Status Codes:</strong> Success (200), Errors (404, 500),
+          Redirects (301)
+        </li>
+        <li>
+          <strong>Request/Response Headers:</strong> See how data is transmitted
+        </li>
+        <li>
+          <strong>Request/Response Bodies:</strong> Inspect sent and received
+          data
+        </li>
+        <li>
+          <strong>Timing:</strong> DNS lookup, connection, request, response
+          times
+        </li>
+        <li>
+          <strong>File Types:</strong> XHR, Fetch, Images, CSS, JS, Documents
+        </li>
+      </ul>
+
+      <div class="demo-section">
+        <h2>1. Fetch Requests (Modern API)</h2>
+        <p>Test different HTTP methods with Fetch API</p>
+        <div class="button-group">
+          <button id="btn-fetch-get">Fetch GET</button>
+          <button id="btn-fetch-post">Fetch POST</button>
+          <button id="btn-fetch-json">Fetch JSON Data</button>
+          <button id="btn-fetch-slow">Slow Fetch (5s)</button>
+          <button id="btn-fetch-error">Fetch 404 Error</button>
+        </div>
+        <div id="fetch-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>2. Image Resources</h2>
+        <p>Loading images creates network requests (observe in Network tab)</p>
+        <button id="btn-load-image">Load Image (10KB)</button>
+        <button id="btn-load-images-multiple">Load Multiple Images</button>
+        <div id="image-container" class="image-container"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>3. Request Timing Analysis</h2>
+        <p>Observe Queueing, DNS, SSL, Request, Wait, Download times</p>
+        <div class="button-group">
+          <button id="btn-timing-normal">Normal Speed</button>
+          <button id="btn-timing-slow">Slow Connection (3s)</button>
+          <button id="btn-timing-multiple">Multiple Requests</button>
+        </div>
+        <div id="timing-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>4. Error Scenarios</h2>
+        <p>Test various error conditions</p>
+        <div class="button-group">
+          <button id="btn-error-404">404 Not Found</button>
+          <button id="btn-error-500">500 Server Error</button>
+          <button id="btn-error-timeout">Request Timeout</button>
+          <button id="btn-error-cors">CORS Error</button>
+        </div>
+        <div id="error-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>5. Request Headers & Auth</h2>
+        <p>View custom headers and authentication</p>
+        <div class="button-group">
+          <button id="btn-custom-headers">Custom Headers</button>
+          <button id="btn-auth-bearer">Bearer Token Auth</button>
+          <button id="btn-content-type">Different Content-Type</button>
+        </div>
+        <div id="header-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>6. Different Request Types</h2>
+        <p>View different request types</p>
+        <div class="button-group">
+          <button id="btn-large-payload">Large Payload</button>
+          <button id="btn-streaming">Streaming Response</button>
+        </div>
+        <div id="request-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>Network Activity Log</h2>
+        <button id="btn-clear-log">Clear Log</button>
+        <div id="activity-log" class="activity-log">
+          <p><em>Network requests will appear here...</em></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

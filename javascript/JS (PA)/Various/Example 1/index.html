@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FormData Activity</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <h1>FormData Activity</h1>
+
+    <form id="taskForm">
+      <input name="title" placeholder="Title" /><br /><br />
+
+      <textarea name="description" placeholder="Description"></textarea>
+      <br /><br />
+
+      <select name="status">
+        <option value="pending">Pending</option>
+        <option value="done">Done</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Output 1: Full Object -->
+    <div class="result">
+      <h3>1️⃣ Form Data as Object</h3>
+      <pre id="objectOutput">No data yet</pre>
+    </div>
+
+    <!-- Output 2: FormData entries -->
+    <div class="result">
+      <h3>2️⃣ FormData Entries</h3>
+      <ul id="formDataOutput">
+        <li>No data yet</li>
+      </ul>
+    </div>
+
+    <!-- Output 3: Object entries -->
+    <div class="result">
+      <h3>3️⃣ Object Entries</h3>
+      <ul id="objectEntriesOutput">
+        <li>No data yet</li>
+      </ul>
+    </div>
+  </body>
+</html>

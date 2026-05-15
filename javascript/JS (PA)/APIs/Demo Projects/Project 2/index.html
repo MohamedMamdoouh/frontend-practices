@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Project 2 — Parallel Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="card">
+        <h2>Parallel Fetch Dashboard</h2>
+        <p class="muted">
+          Loads users + posts at the same time and shows quick stats.
+        </p>
+
+        <div class="row">
+          <button id="btnLoad">Load Dashboard</button>
+          <span class="pill" id="pill">idle</span>
+        </div>
+
+        <div id="error" class="muted"></div>
+        <div class="stats-wrapper-grid" id="stats-grid"></div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </body>
+</html>

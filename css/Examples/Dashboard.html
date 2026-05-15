@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #f0f2f5;
+        }
+
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "aside header" "aside main" "aside footer";
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #fff;
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+            text-align: start;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #fff;
+            padding: 1rem;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        aside h2 {
+            margin-bottom: 1rem;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            grid-area: main;
+            padding: 1rem;
+        }
+
+        h3{
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <header>Admin Dashboard</header>
+
+        <aside>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="card">
+                <h3>Users</h3>
+                <p>1520 active</p>
+            </div>
+
+            <div class="card">
+                <h3>Sales</h3>
+                <p>$589,549</p>
+            </div>
+
+            <div class="card">
+                <h3>Errors</h3>
+                <p>14 today</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Copyright &copy; 2025 Admin Dashboard.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

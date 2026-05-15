@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>font-family Examples</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        /* 1. Single-word font name + generic fallback */
+        .example1 {
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Multi-word font name (quoted) + generic fallback */
+        .example2 {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        /* 3. Monospace stack for code */
+        .example3 {
+            font-family: Consolas, "Courier New", monospace;
+            background: #f4f4f4;
+            padding: 1em;
+            border-radius: 4px;
+        }
+
+        /* 4. Cursive/fantasy generic family */
+        .example4 {
+            font-family: cursive;
+            font-size: 1.2rem;
+        }
+
+        /* 5. System-ui stack for native look */
+        .example5 {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                "Helvetica Neue",
+                Arial,
+                sans-serif;
+        }
+
+
+        h2 {
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>font-family Demonstrations</h1>
+
+    <h2>1. Single-word Name</h2>
+    <p class="example1">
+        This paragraph uses <code>font-family: Arial, sans-serif;</code> — a common web-safe single-word font with a
+        generic fallback.
+    </p>
+
+    <h2>2. Multi-word Name</h2>
+    <p class="example2">
+        This text uses <code>font-family: "Times New Roman", Times, serif;</code> — a multi-word font name in quotes,
+        followed by fallbacks.
+    </p>
+
+    <h2>3. Monospace Code</h2>
+    <pre class="example3">
+function helloWorld() {
+  console.log("Monospace font stack!");
+}
+  </pre>
+
+    <h2>4. Cursive Style</h2>
+    <p class="example4">
+        <code>font-family: cursive;</code> applies a decorative cursive style defined by the browser or OS.
+    </p>
+
+    <h2>5. System UI Stack</h2>
+    <p class="example5">
+        System-UI fonts use the platform’s native interface font for a more integrated look across devices.
+    </p>
+
+
+
+</body>
+
+</html>

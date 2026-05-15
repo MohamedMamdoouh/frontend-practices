@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Position Property Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            padding: 1rem;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .static {
+            position: static;
+            background: #f0f0f0;
+            padding: 0.5rem;
+        }
+
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background: #d0eaff;
+            padding: 0.5rem;
+        }
+
+        .parent {
+            position: relative;
+            height: 150px;
+            background: #ffe0e0;
+            margin-top: 1rem;
+            padding: 0.5rem;
+        }
+
+        .absolute {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: #ffaaaa;
+            padding: 0.5rem;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #d0ffd0;
+            padding: 0.5rem;
+            border: 1px solid #090;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background: #fff0d0;
+            padding: 0.5rem;
+            border-bottom: 1px solid #cc0;
+        }
+
+        /* Filler to Enable Scrolling */
+        .filler {
+            height: 800px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.05));
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS <code>position</code> Property Demo</h1>
+
+    <section>
+        <h2>1. Static</h2>
+        <p class="static">
+            This paragraph is <strong>static</strong> (the default). It follows normal document flow.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Relative</h2>
+        <p class="relative">
+            This paragraph is <strong>relative</strong>. It's offset from its normal position by top/left.
+        </p>
+    </section>
+
+    <section>
+        <h2>3. Absolute</h2>
+        <div class="parent">
+            <p>This container is <strong>relative</strong> positioned.</p>
+            <p class="absolute">
+                This paragraph is <strong>absolute</strong> positioned at bottom-right of its parent.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Fixed</h2>
+        <p class="fixed">
+            This box is <strong>fixed</strong> to the top-right corner of the viewport, even on scroll.
+        </p>
+        <p>Scroll down to see it remain in place.</p>
+    </section>
+
+    <section>
+        <h2>5. Sticky</h2>
+        <p class="sticky">
+            This header is <strong>sticky</strong>. It behaves like relative until you scroll past it, then sticks to
+            the top.
+        </p>
+        <div class="filler">
+            Scroll through this area to watch the sticky element in action.
+        </div>
+    </section>
+
+</body>
+
+</html>

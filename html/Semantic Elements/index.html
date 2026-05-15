@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header,
+        footer,
+        article,
+        nav,
+        aside {
+            border: 1px solid #ccc;
+            padding: 8px;
+            margin: 10px;
+        }
+
+        figure {
+            margin: 10px;
+        }
+
+        figcaption {
+            font-style: italic;
+        }
+
+        time {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <header>
+                <h2>The Importance of Semantic HTML</h2>
+                <time datetime="2025-09-29">Published on September 29, 2025</time>
+            </header>
+            <figure>
+                <img src="..//Images//html.png" alt="HTML logo" title="HTML Logo" width="100px">
+                <figcaption>HTML5 is the latest evolution of the standard that defines HTML.</figcaption>
+            </figure>
+            <p>Using <mark>semantic elements</mark> in HTML helps improve accessibility and search engine optimization.
+                Semantic tags
+                provide information about the contents of those tags, making it easier for search engines and assistive
+                devices to serve users better.
+            </p>
+            <footer>Written by the Editorial Team.</footer>
+        </article>
+        <aside>
+            <h3>Related Posts</h3>
+            <ul>
+                <li><a href="#">Using CSS for Effective Styling</a></li>
+                <li><a href="#">Introduction to JavaScript</a></li>
+            </ul>
+        </aside>
+        <section>
+            <h3>User Comments</h3>
+            <details>
+                <summary>View comments (2)</summary>
+                <p>Jane Doe: Great article!</p>
+                <p>John Smith: Very informative. Thanks!</p>
+            </details>
+        </section>
+    </main>
+    <footer>
+        Copyright © 2023 My Website. All rights reserved.
+    </footer>
+</body>
+
+</html>

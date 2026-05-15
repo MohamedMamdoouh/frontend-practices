@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Contact Information</h1>
+    <form id="registerForm" action="TargetPage.html" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required title="enter valid phone number">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required title="enter valid email">
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="100" required title="Age must be between 18 and 100">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" required
+                title="password must be at least 8 characters">
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" pattern="https://.*" required title="enter valid url">
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Preferences</legend>
+
+            <p>Subscription type:</p>
+            <label for="basic">Basic</label>
+            <input type="radio" id="basic" name="subscription" value="basic" required>
+
+            <label for="premium ">Premium</label>
+            <input type="radio" id="premium" name="subscription" value="premium" required>
+
+            <p>Newsletter:</p>
+            <label for="subscribe">Subscribe to newsletter?</label>
+            <input type="checkbox" id="subscribe" name="subscribe" checked>
+
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="egy">Egypt</option>
+                <option value="Jor">Jordan</option>
+                <option value="Syr">Syria</option>
+            </select>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Your Message</legend>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        </fieldset>
+        <br>
+
+        <button type="submit" style="text-align: center;">Send</button>
+    </form>
+</body>
+
+</html>

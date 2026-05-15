@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CSS Masking - Full Working Examples with Real Photos</title>
+    <style>
+        :root {
+            --bg: #0f1226;
+            --card: #171a35;
+            --ink: #e8ebff;
+            --muted: #b9c0ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 32px;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+            color: var(--ink);
+            background: var(--bg);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 32px;
+        }
+
+        p.lead {
+            margin: 0 0 28px;
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: linear-gradient(180deg, #1b1f42, #131634);
+            border: 1px solid #2a2f64;
+            border-radius: 20px;
+            padding: 18px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 0 0 8px;
+        }
+
+        .card p {
+            margin: 0 0 14px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .stage {
+            border: 1px solid #2a2f64;
+            border-radius: 14px;
+            background: #0b0e23;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 16/10;
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid #2a2f64;
+            color: #cbd4ff;
+            background: #12153a;
+            margin-bottom: 8px;
+        }
+
+        /* ====== Real photo backgrounds ====== */
+        .bg-photo {
+            background-image: url('/Images/A2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bg-photo-2 {
+            background-image: url('/Images/A2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Demo 1: Basic mask-image */
+        .demo1 {
+            width: 90%;
+            height: 90%;
+            border-radius: 16px;
+            mask-image: radial-gradient(circle at 50% 50%,
+                    rgba(0, 0, 0, 1) 45%,
+                    rgba(0, 0, 0, 0) 60%);
+            mask-repeat: no-repeat;
+        }
+
+        /* Demo 2: Size, Position, Repeat */
+        .demo2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            mask-image: radial-gradient(circle,
+                    rgba(0, 0, 0, 1) 0 16px,
+                    rgba(0, 0, 0, 0) 18px);
+            mask-size: 80px 80px;
+            mask-position: 20px 10px;
+            mask-repeat: repeat;
+        }
+
+        .demo2:hover {
+            mask-size: 60px 60px;
+            mask-position: 0 0;
+        }
+
+        /* Demo 3: Linear fade */
+        .demo3 {
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo3 .image {
+            position: absolute;
+            inset: 0;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        /* Demo 4: Text mask */
+        .demo4 {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            background: #0c1030;
+            align-content: center;
+        }
+
+        .demo4 .text {
+            font-weight: 800;
+            font-size: clamp(32px, 20vw, 100px);
+            text-transform: uppercase;
+            background-image: url('/Images/A2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Demo 5: Hover pan text */
+        .demo5 {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            background: #0c1030;
+        }
+
+        .demo5 .text {
+            font-weight: 900;
+            font-size: clamp(32px, 20vw, 160px);
+            text-transform: uppercase;
+            background-image: url('/Images/A2.jpg');
+            background-size: 140% 140%;
+            background-position: left center;
+            background-clip: text;
+            color: transparent;
+            transition: background-position 800ms ease;
+        }
+
+        .demo5:hover .text {
+            background-position: right center;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 8px;
+            right: 10px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.4);
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Masking - Real Photo Examples 🎭</h1>
+    <p class="lead">All demos use Unsplash photographs so you can see real masking effects in action.</p>
+
+    <div class="grid">
+
+        <section class="card">
+            <span class="badge">Demo 1</span>
+            <h2>Basic mask-image</h2>
+            <p>Shows only a circular center.</p>
+            <div class="stage">
+                <div class="demo1 bg-photo"></div>
+                <div class="caption">Radial mask</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <span class="badge">Demo 2</span>
+            <h2>Mask size + position + repeat</h2>
+            <p>Creates a dotted stencil. Hover to change size/position.</p>
+            <div class="stage">
+                <div class="demo2 bg-photo-2"></div>
+                <div class="caption">Hover for effect</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <span class="badge">Demo 3</span>
+            <h2>Linear gradient fade</h2>
+            <p>Fades image into background.</p>
+            <div class="stage">
+                <div class="demo3">
+                    <div class="image bg-photo"></div>
+                </div>
+                <div class="caption">Top → bottom fade</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <span class="badge">Demo 4</span>
+            <h2>Mask text with photo</h2>
+            <p>Photo fills the letters.</p>
+            <div class="stage">
+                <div class="demo4">
+                    <div class="text">Mohammed</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <span class="badge">Demo 5</span>
+            <h2>Hover pan inside text</h2>
+            <p>Moves background photo when hovering.</p>
+            <div class="stage">
+                <div class="demo5">
+                    <div class="text">Explore</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Gradients Demo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .box {
+            height: 150px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* 1️. Linear gradient — smooth horizontal blend */
+        .linear {
+            background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+        }
+
+        /* 2️. Repeating linear gradient — diagonal stripes 10 px wide */
+        .repeating {
+            background-image: repeating-linear-gradient(45deg,
+                    #8e44ad 0px,
+                    #8e44ad 10px,
+                    #3498db 10px,
+                    #3498db 20px);
+        }
+
+        /* 3️. Radial gradient — soft circle fading toward edges */
+        .radial {
+            background-image: radial-gradient(circle at center,
+                    #1abc9c,
+                    #16a085 60%,
+                    transparent
+                );
+        }
+
+        /* 4️. Repeating radial gradient — bullseye rings every 5 px */
+        .rep-radial {
+            background-image: repeating-radial-gradient(circle at center,
+                    #e74c3c 0px,
+                    #e74c3c 5px,
+                    #c0392b 5px,
+                    #c0392b 10px
+                );
+        }
+
+        /* 5️. Conic gradient — 360° sweep like a pie chart */
+        .conic {
+            background-image: conic-gradient(from 0deg at center,
+                    #f1c40f,
+                    #e67e22,
+                    #e74c3c,
+                    #f1c40f
+                );
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Gradients Showcase</h1>
+
+    <div class="demo-grid">
+        <div class="box linear">Linear</div>
+        <div class="box repeating">Repeat-Linear</div>
+        <div class="box radial">Radial</div>
+        <div class="box rep-radial">Repeat-Radial</div>
+        <div class="box conic">Conic</div>
+    </div>
+
+</body>
+
+</html>

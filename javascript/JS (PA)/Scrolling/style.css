@@ -1,0 +1,40 @@
+body {
+  height: 2000px;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#output {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#scrollUp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#scrollUp:hover {
+  background-color: orange;
+  transform: scale(1.05);
+}

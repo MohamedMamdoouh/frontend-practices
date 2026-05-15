@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Uniform Padding Example</title>
+    <style>
+        .uniform-padding {
+            display: inline-block;
+            background-color: #e0f7fa;
+            border: 1px solid #00796b;
+            padding: 20px;
+            /* 20px padding on all sides */
+            margin: 20px;
+        }
+
+        .different-padding {
+            display: inline-block;
+            background-color: #ffecb3;
+            border: 1px solid #fbc02d;
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+            padding-left: 40px;
+            margin: 20px;
+        }
+
+        .two-values {
+            background-color: #e8f5e9;
+            border: 1px solid #388e3c;
+            padding: 15px 30px;
+            /* 15px top/bottom, 30px left/right */
+            margin: 20px;
+        }
+
+        .three-values {
+            background-color: #e3f2fd;
+            border: 1px solid #1976d2;
+            padding: 10px 20px 30px;
+            /* 10px top, 20px left/right, 30px bottom */
+            margin: 20px;
+        }
+
+        .percentage-padding {
+            background-color: #fce4ec;
+            border: 1px solid #d81b60;
+            width: 80%;
+            padding: 5%;
+            /* Padding is 5% of the container's width */
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="uniform-padding">
+        This div has a uniform 20px padding on all sides.
+    </div>
+    <hr>
+    <div class="different-padding">
+        This div has a different padding, 10px on top, 20px on right, 30px on bottom, and 40px on left.
+    </div>
+
+    <body>
+        <div class="percentage-padding">
+            This div uses percentage-based padding. The padding is 5% of the container's width.
+        </div>
+    </body>
+
+</html>

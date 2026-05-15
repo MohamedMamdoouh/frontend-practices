@@ -1,0 +1,41 @@
+body {
+  padding: 40px;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#infoBox {
+  width: 90%;
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #007bff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  word-wrap: break-word;
+}
+
+.label {
+  font-weight: bold;
+  color: #0056b3;
+}

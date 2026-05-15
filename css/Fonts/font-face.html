@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Face</title>
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: 'Allan';
+            font-style: normal;
+            font-weight: 400;
+            src: url('/fonts/allan-v26-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Allan';
+            font-style: normal;
+            font-weight: 700;
+            src: url('/fonts/allan-v26-latin-700.woff2') format('woff2');
+        }
+
+        .allan-regular {
+            font-family: 'Allan', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .allan-bold {
+            font-family: 'Allan', sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="allan-regular">Allan Regular</p>
+    <p class="allan-bold">Allan Bold</p>
+</body>
+
+</html>

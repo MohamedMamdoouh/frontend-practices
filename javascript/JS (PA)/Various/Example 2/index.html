@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Constraint Validation Activity</title>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <h2>Constraint Validation API Demo</h2>
+
+    <form id="demoForm">
+      <input
+        name="title"
+        placeholder="Title"
+        required
+        minlength="3"
+        maxlength="50"
+      /><br /><br />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        maxlength="100"
+      /><br /><br />
+
+      <input
+        type="number"
+        name="age"
+        placeholder="Age"
+        min="18"
+        max="100"
+        required
+        step="1"
+        value="18"
+      /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

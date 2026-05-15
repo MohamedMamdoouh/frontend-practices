@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background-Image</title>
+
+    <style>
+        body {
+            background-image: url("/Images/Image.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header {
+            color: #FFF;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .feature-section {
+            background-color: white;
+            background-image: url("/Images/Image2.jpg");
+            background-size: contain;
+            background-repeat: repeat;
+            background-position: left;
+            color: white;
+            border: 2px solid #333;
+        }
+
+        button {
+            background-image: url("/Images/Image2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to CSS Background Images!</h1>
+        <p>Enhance your web design with stunning background images and overlays.</p>
+    </header>
+
+    <section class="feature-section">
+        <h2>Feature Section</h2>
+        <p>This section demonstrates the use of a background image on a container element. Notice how the image is
+            scaled and positioned to create a visually appealing design.</p>
+    </section>
+
+    <section>
+        <h2>Call to Action</h2>
+        <p>Click the button below to learn more about our design services.</p>
+        <button>Learn More</button>
+    </section>
+</body>
+
+</html>

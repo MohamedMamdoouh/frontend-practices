@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+
+<body style="font-size: 20px;">
+    <table style="width: 50%;" border="1px;">
+        <caption>This is a table for employees</caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Job</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>Mohamed Ali</td>
+            <td>25</td>
+            <td>Developer</td>
+            <td>7000</td>
+        </tr>
+        <tr>
+            <td>Ali Mahmoud</td>
+            <td>30</td>
+            <td>Designer</td>
+            <td>5600</td>
+        </tr>
+        <tr>
+            <td>Alaa Elsayed</td>
+            <td>40</td>
+            <td>Manager</td>
+            <td>9000</td>
+        </tr>
+    </table>
+    <br>
+    <table style="width: 50%;" border="1px;">
+        <caption>This is a table for employees (with merged cells)</caption>
+
+        <th>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Job</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </th>
+
+        <tbody>
+            <tr>
+                <td>Mohamed Ali</td>
+                <td>25</td>
+                <td>Developer</td>
+                <td>Development</td>
+                <td>7000</td>
+            </tr>
+            <tr>
+                <td>Ali Mahmoud</td>
+                <td>30</td>
+                <td>UX</td>
+                <td rowspan="2">Design</td>
+                <td>5600</td>
+            </tr>
+            <tr>
+                <td>Yousef Ibrahim</td>
+                <td>27</td>
+                <td>Designer</td>
+                <td>4600</td>
+            </tr>
+            <tr>
+                <td>Alaa Elsayed</td>
+                <td>40</td>
+                <td>Manager</td>
+                <td>Management</td>
+                <td>9000</td>
+            </tr>
+            <tr>
+                <td>Salah Ahmed</td>
+                <td>26</td>
+                <td>Marketer</td>
+                <td>Marketing</td>
+                <td>6000</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4">Total Salaries</td>
+                <td>26100</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Tab Testing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Performance Tab Testing</h1>
+      <p>
+        Open Dev Tools (F12 → Performance tab) to analyze JavaScript execution,
+        rendering, and memory usage.
+      </p>
+
+      <div class="demo-section">
+        <h2>Execution Performance</h2>
+        <p>
+          Measure JavaScript execution time with performance.mark() and
+          performance.measure()
+        </p>
+        <div class="button-group">
+          <button id="btn-simple-task">Simple Task</button>
+          <button id="btn-heavy-task">Heavy Task (1M iterations)</button>
+          <button id="btn-measure">Show Measurements</button>
+        </div>
+        <div id="execution-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>DOM Manipulation Performance</h2>
+        <p>Watch rendering performance when modifying the DOM</p>
+        <div class="button-group">
+          <button id="btn-add-elements">Add 100 Elements</button>
+          <button id="btn-batch-elements">Batch Update (Optimized)</button>
+          <button id="btn-clear-dom">Clear Elements</button>
+        </div>
+        <div id="dom-output" class="output-box">
+          <div id="element-container"></div>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <h2>Memory & Garbage Collection</h2>
+        <p>Observe memory usage patterns and object allocation</p>
+        <div class="button-group">
+          <button id="btn-allocate-memory">Allocate Memory</button>
+          <button id="btn-memory-leak">Simulate Memory Leak</button>
+          <button id="btn-cleanup-memory">Cleanup Memory</button>
+        </div>
+        <div id="memory-output" class="output-box"></div>
+      </div>
+
+      <div class="demo-section">
+        <h2>Paint & Layout Performance</h2>
+        <p>Trigger repaints and reflows to see performance impact</p>
+        <div class="button-group">
+          <button id="btn-trigger-layout">Trigger Layout Recalc</button>
+          <button id="btn-trigger-paint">Trigger Paint</button>
+          <button id="btn-animation">CSS Animation</button>
+        </div>
+        <div id="paint-output" class="output-box">
+          <div id="animated-box"></div>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <h2>Network Simulation</h2>
+        <p>Simulate async operations and network delays</p>
+        <div class="button-group">
+          <button id="btn-fetch-slow">Slow Request (3s)</button>
+          <button id="btn-fetch-fast">Fast Request (0.5s)</button>
+        </div>
+        <div id="network-output" class="output-box"></div>
+      </div>
+    </div>
+  </body>
+</html>

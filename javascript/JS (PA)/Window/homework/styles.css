@@ -1,0 +1,155 @@
+:root {
+  --gold: #d4af37;
+  --gold-dark: #b58f1e;
+  --black: #0a0a0a;
+  --text-light: #fdf6d5;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("images/tasbeeh-gold.png") no-repeat center center fixed;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  color: var(--text-light);
+  background-color: #080806;
+  direction: rtl;
+}
+
+.tasbeeh-img {
+  width: 180px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+  border-radius: 10px;
+}
+
+.logo {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  z-index: 10;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+.site-link {
+  position: absolute;
+  top: 220px;
+  left: 60px;
+  font-size: 0.95rem;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 11;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.site-link:hover {
+  color: #fff4c1;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.9),
+    0 0 40px rgba(212, 175, 55, 0.6);
+  transform: scale(1.08);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.box {
+  background: linear-gradient(145deg, #111 0%, #000 100%);
+  border: 3px solid var(--gold);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4),
+    inset 0 0 15px rgba(212, 175, 55, 0.2);
+  padding: 50px 60px;
+  text-align: center;
+  width: 600px;
+  position: relative;
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--gold);
+}
+
+.box::before {
+  top: 15px;
+  left: 15px;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.box::after {
+  bottom: 15px;
+  right: 15px;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+
+#status {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 20px 0 30px;
+  color: var(--gold);
+  transition: color 0.3s, transform 0.3s;
+}
+
+#startBtn {
+  background: linear-gradient(145deg, var(--gold), var(--gold-dark));
+  color: #000;
+  border: none;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+#startBtn:hover:not(:disabled) {
+  background: linear-gradient(145deg, #e6c75a, var(--gold));
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+}
+
+#startBtn:disabled {
+  background: #555;
+  color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

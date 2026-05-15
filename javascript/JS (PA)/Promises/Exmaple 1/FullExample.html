@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <title>Consuming Promises Example</title>
+  </head>
+
+  <body>
+    <h2>Open the Console to See Output</h2>
+
+    <script>
+      console.log("Page loaded");
+
+      // Create a Promise
+      const promise = new Promise((resolve, reject) => {
+        const success = true;
+
+        // Simulate async task (e.g. network request)
+        setTimeout(() => {
+          if (success) {
+            resolve(10);
+          } else {
+            reject("Failed");
+          }
+        }, 1000);
+      });
+
+      // Consume the Promise
+      promise
+        .then((value) => {
+          console.log("Original value:", value);
+          return value * 2;
+        })
+        .then((result) => {
+          console.log("Doubled value:", result);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        })
+        .finally(() => {
+          console.log("Finished");
+        });
+
+      console.log("JavaScript is non-blocking");
+    </script>
+  </body>
+</html>

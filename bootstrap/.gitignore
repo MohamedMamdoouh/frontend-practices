@@ -1,0 +1,17 @@
+# Frontend Technologies
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+dist/
+build/
+
+# Misc
+.DS_Store
+Thumbs.db

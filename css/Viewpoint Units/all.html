@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Units Showcase</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .unit-box {
+            border: 2px solid #333;
+            margin: 20px auto;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .px-box {
+            width: 300px;
+            height: 100px;
+            background: #2196f3;
+        }
+
+        .in-box {
+            width: 2in;
+            height: 1in;
+            background: #4caf50;
+        }
+
+        .cm-box {
+            width: 5cm;
+            height: 2cm;
+            background: #f44336;
+        }
+
+        .percent-box {
+            width: 80%;
+            height: 50px;
+            background: #ff9800;
+        }
+
+        .em-box {
+            font-size: 1.5em;
+            padding: 2em;
+            background: #9c27b0;
+            width: 20em;
+        }
+
+        .rem-box {
+            font-size: 1.25rem;
+            padding: 1rem;
+            background: #00bcd4;
+            width: 25rem;
+        }
+
+        .vw-box {
+            width: 50vw;
+            height: 20vh;
+            background: #795548;
+        }
+
+        .ch-box {
+            width: 30ch;
+            background: #607d8b;
+        }
+
+        .ex-box {
+            margin-top: 4ex;
+            background: #e91e63;
+            height: 10ex;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unit-box px-box">PX Box (300px × 100px)</div>
+    <div class="unit-box in-box">IN Box (2in × 1in)</div>
+    <div class="unit-box cm-box">CM Box (5cm × 2cm)</div>
+    <div class="unit-box percent-box">% Box (80% width)</div>
+    <div class="unit-box em-box">EM Box (20em width, 2em padding)</div>
+    <div class="unit-box rem-box">REM Box (25rem width, 1rem padding)</div>
+    <div class="unit-box vw-box">VW/VH Box (50vw × 20vh)</div>
+    <div class="unit-box ch-box">CH Box (30ch width)</div>
+    <div class="unit-box ex-box">EX Box (Margin: 4ex, Height: 10ex)</div>
+</body>
+
+</html>

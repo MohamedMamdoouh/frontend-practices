@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.5;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header header header"
+                "nav main ads"
+                "footer footer footer";
+            height: 100vh;
+            gap: 0.6rem;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #4a90e2;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: #50e3c2;
+            padding: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #9013fe;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .ads {
+            grid-area: ads;
+            background-color: #bd10e0;
+            padding: 20px;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #e0bd10;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>My Magazine Header</header>
+
+        <nav>
+            <ul>
+                <li><a href="#">Section 1</a></li>
+                <li><a href="#">Section 2</a></li>
+                <li><a href="#">Section 3</a></li>
+            </ul>
+        </nav>
+
+        <aside class="ads">
+            <h2>Sponsored</h2>
+            <p>any ads will be here</p>
+        </aside>
+
+        <main>
+            <h2>Title</h2>
+            <p>this is title content. bla bla....</p>
+        </main>
+
+        <footer>
+            © 2025 My Magazine
+        </footer>
+    </div>
+</body>
+
+</html>

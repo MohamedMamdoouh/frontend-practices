@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+
+<body style="display: flex; margin: 0; height: 100vh;">
+    <div id="navigator" style="width: 20%; border-right: 1px solid #ccc; margin-left: 10px;">
+        <h2>Short Stories:</h2>
+        <a href="page1.html" target="contentFrame">The Grateful Traveler</a><br>
+        <a href="page2.html" target="contentFrame">The Wise Owl and the Rabbit</a><br>
+        <a href="page3.html" target="contentFrame">The Brave Little Squirrel</a><br>
+    </div>
+
+    <div id="content" style="width: 70%; margin-left: 20px; border: none;">
+        <h2 style="text-align: center; color: red;">Short Story Section</h2>
+        <iframe name="contentFrame" src="page1.html" style="width: 100%; height: 100%; border: none;"
+            title="frame to show pages in"></iframe>
+    </div>
+</body>
+
+</html>

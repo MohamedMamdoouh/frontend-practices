@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>display:none vs visibility:hidden</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 1rem;
+        }
+
+        .box {
+            width: 120px;
+            height: 80px;
+            margin: 0.5rem;
+            display: inline-block;
+            background: lightblue;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .hidden-display {
+            display: none;
+        }
+
+        .hidden-visibility {
+            visibility: hidden;
+        }
+
+        button {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hiding Elements with CSS</h1>
+    <p>
+        <button onclick="document.getElementById('a').classList.toggle('hidden-display')">
+            Toggle <code>display:none</code> on Box A
+        </button>
+        <button onclick="document.getElementById('b').classList.toggle('hidden-visibility')">
+            Toggle <code>visibility:hidden</code> on Box B
+        </button>
+    </p>
+
+    <div id="a" class="box">Box A</div>
+    <div id="b" class="box">Box B</div>
+    <div class="box">Box C</div>
+
+    <p class="note">
+        • Toggling <code>display:none</code> on Box A will collapse it and shift Box C into its place.<br>
+        • Toggling <code>visibility:hidden</code> on Box B will hide it but keep its blank space.
+    </p>
+
+</body>
+
+</html>

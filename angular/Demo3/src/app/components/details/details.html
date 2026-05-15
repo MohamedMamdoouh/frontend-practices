@@ -1,0 +1,29 @@
+@if (product == null) {
+  <h4>No products found</h4>
+} @else {
+  <h4>{{ product.name }}</h4>
+  <h5>id: {{ product.id }}</h5>
+  <img [src]="product.imageUrl" [alt]="product.name" />
+  <p>Price: {{ product.price | currency: 'EGP' }}</p>
+  <p>Manufacture Date: {{ product.manufactureDate | date: 'fullDate' }}</p>
+  <p>{{ product.description }}</p>
+  @if (product.quantity === 1) {
+    <p>Only 1 left!</p>
+  }
+  @if (product.quantity !== 1) {
+    <p>Available: {{ product.quantity }}</p>
+  }
+}
+
+<button class="btn btn-primary" (click)="goBack()">Back</button>
+
+<div>
+  <button (click)="goPrev()" class="btn btn-danger" [disabled]="currentIndex === 0">prev</button>
+  <button
+    (click)="goNext()"
+    class="btn btn-success"
+    [disabled]="currentIndex === arrIds.length - 1"
+  >
+    next
+  </button>
+</div>

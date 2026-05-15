@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test 2</title>
+  </head>
+
+  <body>
+    <!-- <h1>Test page => for demo!</h1> -->
+
+    <!-- <script>
+      // var x = 50;
+      let x = 50;
+      console.log(x);
+      console.log(globalThis.x);
+    </script> -->
+
+    <!-- <script>
+      alert("hi, this is alert from alert");
+      globalThis.alert("hi, this is alert from window");
+
+      let score = 100;
+      alert("Your score is " + score);
+
+      alert("hi \n this is a new line!");
+
+      let name = "Ahmed";
+      let score2 = 150;
+      alert(`name is ${name} and score is ${score2}`);
+    </script> -->
+
+    <!-- <script>
+      let result = confirm("Are you sure you want to delete this user?");
+      if (result) {
+        alert("user deleted!");
+      } else {
+        alert("user did not deleted!");
+      }
+
+      let name = "Mohamed";
+      if (confirm(`do you want to log out, ${name} ?`)) {
+        globalThis.location.href = "https://www.google.com";
+      } else {
+        alert("still here!");
+      }
+    </script> -->
+
+    <!-- <script>
+      let name = prompt("enter your name?");
+      alert(`Your name is ${name}`);
+
+      let city = prompt("enter your city?", "Cairo");
+      alert("your city is " + city);
+
+      let age = prompt("enter your age?");
+      if (age === null) {
+        alert("you entered null!");
+      } else if (age === "") {
+        alert("you entered space!");
+      } else {
+        alert("your age is: " + age);
+      }
+
+      let result = prompt("enter your name?");
+      if(result)
+      {
+        document.body.innerHTML = `<h2> hello ${result}!</h2>`;
+      }
+    </script> -->
+
+    <!-- <button
+      onclick="window.open('https://www.google.com', '_blank', 'width=500, height=400, left=100, top=100')"
+    >
+      Click here to open Google
+    </button>
+
+    <button onclick="showBlankPage();">Open a blank page</button>
+
+    <button onclick="showHtmlPage();">Open html page</button>
+
+    <button onclick="focusPage();">Focus Page Example</button>
+
+    <script>
+      function showBlankPage() {
+        let newWindow = window.open("", "_blank", "width=800,height=600");
+        newWindow.document.write("<h2>Hello, this is blank page!</h2>");
+      }
+
+      function showHtmlPage() {
+        let newWin = window.open("test.html", "_blank", "width=800,height=600");
+        newWin.document.write("<h2>Hello, this is test page also!</h2>");
+
+        newWin.document.body.style.backgroundColor = "#a52a2a";
+        newWin.document.body.style.color = "#ffffff";
+
+        setTimeout(() => {
+          newWin.close();
+        }, 5000);
+      }
+
+      function focusPage() {
+        let newWin = window.open("test.html", "_blank", "width=800,height=600");
+        setTimeout(() => {
+          newWin.focus();
+        }, 3000);
+      }
+    </script> -->
+
+    <!-- <button onclick="Test1();">Click here to test dimensions - inner</button>
+
+    <button onclick="Test2();">Click here to test dimensions - outer</button>
+
+    <button onclick="Test3();">
+      Click here to test dimensions - screen X, Y
+    </button>
+
+    <script>
+      function Test1() {
+        console.log("Inner Width:", window.innerWidth);
+        console.log("Inner Height:", window.innerHeight);
+
+        if (window.innerWidth < 600) {
+          document.body.style.backgroundColor = "lightblue";
+        }
+      }
+
+      function Test2() {
+        console.log("Outer Width:", window.outerWidth);
+        console.log("Outer Height:", window.outerHeight);
+
+        if (window.outerWidth < 900) {
+          document.body.style.backgroundColor = "red";
+        }
+      }
+
+      function Test3() {
+        console.log("Screen X:", window.screenX);
+        console.log("Screen Y:", window.screenY);
+
+        if (window.screenY < 50) {
+          document.body.style.backgroundColor = "green";
+        }
+      }
+    </script> -->
+
+    <!-- <h1 id="timer">5</h1>
+    <button onclick="Counting();">Click here to start counting</button> -->
+
+    <!-- <h1 id="status">Use button to start</h1>
+    <button onclick="Counting();">Start</button> -->
+    <script>
+      // setTimeout(() => {
+      //   alert("this message after 3 seconds!");
+      // }, 3000);
+
+      // let result = setTimeout(() => {
+      //   alert("this message after 3 seconds!");
+      // }, 5000);
+
+      // clearTimeout(result);
+
+      // setInterval(() => {
+      //   console.log("message every 2 seconds!");
+      // }, 2000);
+
+      // let counter = 0;
+      // let interval = setInterval(() => {
+      //   counter++;
+      //   console.log("counter = ", counter);
+      //   if (counter === 5) clearInterval(interval);
+      // }, 2000);
+
+      // function Counting() {
+      //   let timeLeft = 5;
+      //   let head = document.getElementById("timer");
+
+      //   let result = setInterval(() => {
+      //     timeLeft--;
+      //     head.textContent = timeLeft;
+      //     if (timeLeft === 0) {
+      //       clearInterval(result);
+      //       setTimeout(() => {
+      //         alert("time up");
+      //       }, 500);
+      //     }
+      //   }, 1000);
+      // }
+
+      // function Counting() {
+      //   let head = document.getElementById("status");
+      //   head.textContent = "Starting Soon...";
+
+      //   setTimeout(() => {
+      //     head.textContent = "Running...";
+      //     let counter = 0;
+      //     let result = setInterval(() => {
+      //       counter++;
+      //       head.textContent = counter;
+      //       if (counter === 5) {
+      //         clearInterval(result);
+      //       }
+      //     }, 1000);
+      //   }, 2000);
+      // }
+    </script>
+  </body>
+</html>

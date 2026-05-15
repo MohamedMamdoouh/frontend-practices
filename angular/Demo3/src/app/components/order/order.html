@@ -1,0 +1,21 @@
+<h4>Current Date: {{ currentDate | date: 'fullDate' }}</h4>
+<h4>Total Price: {{ totalPrice | currency: 'EGP' }}</h4>
+
+<div class="mb-3">
+  <label class="form-label">Category</label>
+  <select class="form-select form-select-lg" [(ngModel)]="selectedCategoryId">
+    <option selected [ngValue]="0">All</option>
+    @for (category of categories; track category.id) {
+      <option [ngValue]="category.id">{{ category.name }}</option>
+    }
+  </select>
+</div>
+
+<div class="bg-warning my-5">
+  <app-product
+    [receivedCategoryId]="selectedCategoryId"
+    (onTotalPriceChange)="getTotalPrice($event)"
+  ></app-product>
+</div>
+
+<input type="text" #search placeholder="Search by name" class="form-control mb-3" />

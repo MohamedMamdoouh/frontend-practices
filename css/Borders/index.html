@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders</title>
+
+    <style>
+        .basic-border {
+            background-color: #ffefd5;
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .dashed-border {
+            background-color: #e0ffff;
+            border: 3px dashed green;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .dotted-border {
+            background-color: #add8e6;
+            border: 4px dotted blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .double-border {
+            background-color: white;
+            border: 5px double purple;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .rounded-border {
+            border: 3px solid orange;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .custom-border {
+            border-top: 2px solid green;
+            border-right: 3px dashed red;
+            border-bottom: 4px solid purple;
+            border-left: 5px dotted blue;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .custom-border2 {
+            background-color: #add8e6;
+            display: inline-block;
+            border-left: 5px solid red;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="basic-border">This div has a basic 2px solid red.</p>
+        <p class="dashed-border">This div has a 3px dashed green border.</p>
+        <p class="dotted-border">This div has a 4px dotted blue border.</p>
+        <p class="double-border">This div has a 5px double purple border.</p>
+        <p class="rounded-border">This div has rounded borders thanks to the border-radius property.</p>
+        <p class="custom-border">This div demonstrates different border styles on each side. Notice how each side has
+            its own unique style and
+            color.</p>
+        <p class="custom-border2">This div demonstrates only
+            left border style on left
+            side.</p>
+    </div>
+</body>
+
+</html>

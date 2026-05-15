@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Storage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <h2>Web Storage Demo</h2>
+
+    <input id="nameInput" type="text" placeholder="Enter you name..." />
+
+    <button onclick="saveLS()">Save in Local Storage</button>
+    <button onclick="loadLS()">Load from Local Storage</button>
+    <button onclick="clearLS()">Clear Local Storage</button>
+
+    <br />
+
+    <button onclick="saveSS()">Save in Session Storage</button>
+    <button onclick="loadSS()">Load from Session Storage</button>
+    <button onclick="clearSS()">Clear Session Storage</button>
+
+    <div id="output"></div>
+  </body>
+</html>

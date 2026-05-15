@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanitization Example</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <h1>Input Sanitization Demo</h1>
+    <form id="inputForm">
+      <label for="userInput"
+        >Enter some text (try including HTML tags like &lt;script&gt; or
+        &lt;b&gt;):</label
+      ><br />
+      <textarea id="userInput" name="userInput" rows="4" cols="50"></textarea
+      ><br />
+      <button type="submit">Submit</button>
+    </form>
+    <h2>Sanitized Output:</h2>
+    <div id="output"></div>
+  </body>
+</html>

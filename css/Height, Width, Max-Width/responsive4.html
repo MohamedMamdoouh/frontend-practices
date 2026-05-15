@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Dimensions Demo</title>
+
+    <style>
+        /* Basic reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Fixed width and height */
+        .fixed-box {
+            width: 300px;
+            height: 150px;
+            background-color: #ffb3b3;
+            padding: 20px;
+            border: 2px solid #d33;
+            margin: 20px auto;
+        }
+
+        /* Relative width and height */
+        .relative-box {
+            width: 50%;
+            height: auto;
+            background-color: #b3d9ff;
+            padding: 20px;
+            border: 2px solid #339;
+            margin: 20px auto;
+        }
+
+        /* Max width example */
+        .max-width-box {
+            width: 80%;
+            max-width: 600px;
+            background-color: #b3ffb3;
+            padding: 20px;
+            border: 2px solid #393;
+            margin: 20px auto;
+        }
+
+        /* Responsive section */
+        .responsive-section {
+            width: 90%;
+            max-width: 900px;
+            background-color: #fff3b3;
+            padding: 20px;
+            border: 2px solid #999933;
+            margin: 30px auto;
+        }
+
+        /* Article with rem units */
+        .rem-box {
+            width: 30rem;
+            padding: 2rem;
+            background-color: #e0b3ff;
+            border: 2px solid #663399;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Dimensions Experiment</h1>
+
+    <div class="fixed-box">
+        <strong>Fixed Box:</strong> width 300px, height 150px. Doesn't scale.
+    </div>
+
+    <div class="relative-box">
+        <strong>Relative Box:</strong> width 50%, height auto. Adjusts with window size.
+    </div>
+
+    <div class="max-width-box">
+        <strong>Max-Width Box:</strong> width 80%, but never exceeds 600px.
+    </div>
+
+    <section class="responsive-section">
+        <strong>Responsive Section:</strong> Combines percentage width and max-width for balanced layout.
+    </section>
+
+    <article class="rem-box">
+        <strong>REM Box:</strong> Uses rem units so it scales with root font size.
+    </article>
+</body>
+
+</html>

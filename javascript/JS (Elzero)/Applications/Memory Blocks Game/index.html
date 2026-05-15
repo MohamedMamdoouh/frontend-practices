@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div>Hello: <span id="player-name">Player</span></div>
+      <div>Time: <span id="timer">60</span>s</div>
+      <div>Wrong Tries: <span id="wrong-tries">0</span></div>
+    </div>
+
+    <div id="game-grid" class="grid">
+      <!-- Cards will be generated dynamically with JS -->
+    </div>
+
+    <div id="name-input-dialog" class="notification">
+      <div class="notification-content">
+        <h2>Welcome to Memory Game!</h2>
+        <p>Please enter your name to start playing:</p>
+        <input
+          type="text"
+          id="player-name-input"
+          placeholder="Your name"
+          maxlength="20"
+        />
+        <button id="start-game-btn">Start Game</button>
+      </div>
+    </div>
+
+    <div id="victory-notification" class="notification">
+      <div class="notification-content">
+        <h2>Congratulations!</h2>
+        <p>You've matched all the cards!</p>
+        <p>Time taken: <span id="final-time">0</span>s</p>
+        <p>Wrong tries: <span id="final-wrong-tries">0</span></p>
+        <button id="play-again-btn">Play Again</button>
+      </div>
+    </div>
+  </body>
+</html>

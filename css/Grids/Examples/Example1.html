@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 1</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: minmax(200px, 0.7fr) minmax(300px, 3.3fr);
+            grid-template-rows: minmax(80px, auto) 1fr minmax(80px, auto);
+            grid-template-areas:
+                "header header"
+                "aside main"
+                "footer-left footer-right";
+            min-height: 100vh;
+            gap: 8px;
+            padding: 5px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #89375F;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #BA90C6;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .footer-left {
+            grid-area: footer-left;
+            background-color: #89375F;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .footer-right {
+            grid-area: footer-right;
+            background-color: #89375F;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #E8A0BF;
+            color: #333;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: minmax(80px, auto) 1fr minmax(80px, auto);
+                grid-template-areas:
+                    "header header"
+                    "main main"
+                    "aside aside"
+                    "footer-left footer-right";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h2>Header</h2>
+        </header>
+
+        <aside>
+            <h2>Sidebar</h2>
+            <ul>
+                <li>Navigation Link 1</li>
+                <li>Navigation Link 2</li>
+                <li>Navigation Link 3</li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Main Content</h2>
+            <p>Hey! this is main part of our page.</p>
+            <p>Resize the browser to see the responsive change in the grid areas.</p>
+        </main>
+
+        <div class="footer-left">
+            <div>
+                <h2>Footer Left</h2>
+                <p>Contact Information</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div>
+                <h2>Footer Right</h2>
+                <p>Footer © 2025</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

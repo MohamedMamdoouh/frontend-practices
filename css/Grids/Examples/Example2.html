@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "header header header" "sidebar main ads" "footer footer footer";
+            gap: 10px;
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background: #369;
+            color: white;
+            padding: 10px;
+        }
+
+        .nav-links {
+            grid-area: sidebar;
+            background: #9cf;
+            padding-left: 10px;
+        }
+
+        .ads {
+            padding-left: 10px;
+            grid-area: ads;
+            background: #f99;
+        }
+
+        main {
+            padding-left: 10px;
+            grid-area: main;
+            background: #fc9;
+        }
+
+        footer {
+            padding-left: 10px;
+            grid-area: footer;
+            background: #636;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h2>Header</h2>
+        </header>
+
+        <aside class="nav-links" aria-label="navigation links">
+            <h2>Sidebar</h2>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+            </ul>
+        </aside>
+
+        <aside class="ads" aria-label="ads">
+            <h2>Ads</h2>
+            <ul>
+                <li>ad 1</li>
+                <li>ad 2</li>
+                <li>ad 3</li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>Main Content</h2>
+            <p>Main content scrolls if needed.</p>
+        </main>
+
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+    </div>
+</body>
+
+</html>

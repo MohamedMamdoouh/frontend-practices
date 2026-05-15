@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breakpoint & Stepping Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Watch, Scope & Call Stack Demo</h1>
+      <p>Open Dev Tools (F12 → Sources tab) and learn:</p>
+      <ul>
+        <li>
+          <strong>Scope Panel:</strong> View local, closure, and global
+          variables at each execution point
+        </li>
+        <li>
+          <strong>Watch Panel:</strong> Add expressions to monitor them as code
+          executes
+        </li>
+        <li>
+          <strong>Call Stack Panel:</strong> See the function call hierarchy and
+          navigate between frames
+        </li>
+      </ul>
+
+      <div class="button-group">
+        <button id="btn-scope">Explore Scope</button>
+        <button id="btn-watch">Watch Variables</button>
+        <button id="btn-callstack">Call Stack</button>
+        <button id="btn-closure">Closure Scope</button>
+      </div>
+
+      <div id="output"></div>
+    </div>
+  </body>
+</html>

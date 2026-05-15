@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+button {
+  padding: 12px 30px;
+  margin: 6px;
+  border: none;
+  background: #0056b3;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}

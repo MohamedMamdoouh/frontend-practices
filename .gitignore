@@ -1,0 +1,26 @@
+# Frontend Development
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# Build outputs
+dist/
+build/
+/coverage
+
+# IDE
+.vscode/

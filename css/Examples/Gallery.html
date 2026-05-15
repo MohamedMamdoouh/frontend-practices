@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            background: #fafafa;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .image-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .image-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: bottom 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Photo Gallery</h1>
+    <div class="gallery-container">
+
+        <div class="image-item">
+            <img src="Images/A1.jpg" alt="A1">
+            <div class="caption">Caption A</div>
+        </div>
+
+        <div class="image-item">
+            <img src="Images/A2.jpg" alt="A2">
+            <div class="caption">Caption B</div>
+        </div>
+
+        <div class="image-item">
+            <img src="Images/A3.jpg" alt="A3">
+            <div class="caption">Caption C</div>
+        </div>
+
+        <div class="image-item">
+            <img src="Images/A6.jpg" alt="A6">
+            <div class="caption">Caption D</div>
+        </div>
+
+        <div class="image-item">
+            <img src="Images/A7.jpg" alt="A7">
+            <div class="caption">Caption E</div>
+        </div>
+
+        <div class="image-item">
+            <img src="Images/A9.jpg" alt="A9">
+            <div class="caption">Caption F</div>
+        </div>
+    </div>
+</body>
+
+</html>

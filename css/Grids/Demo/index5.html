@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit Rows with grid-auto-rows</title>
+    <style>
+        body {
+            padding-left: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid1 {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-auto-rows: 60px;
+            gap: 10px;
+        }
+
+        .grid1 div {
+            background: #4a90e2;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Implicit Rows Demo</h2>
+    <div class="grid1">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+    </div>
+</body>
+
+</html>

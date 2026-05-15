@@ -1,0 +1,47 @@
+h1 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+h3 {
+    color: green;
+}
+
+h4 {
+    color: darkgreen;
+}
+
+h5 {
+    color: purple;
+}
+
+h6 {
+    color: orange;
+}
+
+p {
+    color: black;
+    font-size: 25px;
+}
+
+div {
+    color: #2E8B57;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 50px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+span {
+    color: #333;
+    font-family: 'Georgia', serif;
+    font-size: 25px;
+    margin: 10px 20px;
+    display: block;
+    text-align: center;
+}
+
+/* Comment! */

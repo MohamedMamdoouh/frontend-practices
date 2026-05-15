@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elements Tab Debugging Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Elements Tab Debugging Demo</h1>
+      <p>Open Dev Tools (F12 → Elements/Inspector tab) to explore:</p>
+      <ul>
+        <li>
+          <strong>DOM Inspection:</strong> Right-click elements and select
+          "Inspect" or "Inspect Element"
+        </li>
+        <li>
+          <strong>Live CSS Editing:</strong> Modify CSS rules in real-time and
+          see changes
+        </li>
+        <li>
+          <strong>DOM Manipulation:</strong> Watch the HTML tree update as
+          elements are created/modified
+        </li>
+        <li>
+          <strong>Attribute Editing:</strong> Double-click attributes to edit
+          them directly
+        </li>
+        <li>
+          <strong>Computed Styles:</strong> See all CSS rules applied to an
+          element
+        </li>
+      </ul>
+
+      <div class="demo-section">
+        <h2>1. Dynamic Element Creation</h2>
+        <button id="btn-create-elements">Create Dynamic Elements</button>
+        <div id="dynamic-container" class="demo-box">
+          <p>Elements will appear here...</p>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <h2>2. Class & Attribute Manipulation</h2>
+        <button id="btn-toggle-class">Toggle Classes</button>
+        <button id="btn-change-attributes">Change Attributes</button>
+        <div id="style-box" class="box box-default" data-status="inactive">
+          <p class="text-default">I have dynamic classes and attributes</p>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <h2>3. Event Delegation & DOM Events</h2>
+        <button id="btn-add-items">Add List Items</button>
+        <ul id="event-list" class="list">
+          <li class="list-item">Item 1</li>
+          <li class="list-item">Item 2</li>
+          <li class="list-item">Item 3</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <h2>4. Form Elements & State</h2>
+        <form id="demo-form" class="form">
+          <input
+            type="text"
+            id="name-input"
+            class="input"
+            placeholder="Enter name"
+            value="John"
+          />
+          <select id="color-select" class="select">
+            <option value="red">Red</option>
+            <option value="blue" selected>Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <textarea
+            id="message-textarea"
+            class="textarea"
+            placeholder="Enter message"
+          >
+Sample text here</textarea
+          >
+          <div id="form-output" class="output-box">
+            Form values will appear here
+          </div>
+        </form>
+        <button id="btn-update-form">Update Form</button>
+      </div>
+
+      <div class="demo-section">
+        <h2>5. CSS Transitions & Animations</h2>
+        <button id="btn-animate">Animate Box</button>
+        <div id="animated-box" class="animated-box">
+          <span class="box-text">Hover or Click Me!</span>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <h2>6. Complex Nested Structure</h2>
+        <div id="complex-structure" class="complex-wrapper">
+          <div class="section-header">
+            <h3>Nested Elements</h3>
+          </div>
+          <div class="section-content">
+            <div class="card">
+              <div class="card-header">Header 1</div>
+              <div class="card-body">Body content 1</div>
+            </div>
+            <div class="card">
+              <div class="card-header">Header 2</div>
+              <div class="card-body">Body content 2</div>
+            </div>
+          </div>
+        </div>
+        <button id="btn-inspect-nested">Modify Nested Elements</button>
+      </div>
+    </div>
+  </body>
+</html>

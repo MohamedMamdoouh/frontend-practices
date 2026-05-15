@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IndexedDB Search</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>IndexedDB — Search UI</h1>
+
+    <div class="search-box">
+      <input id="search-input" type="text" placeholder="Search name..."></input>
+      <button id="search-btn">Search</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+
+    <div class="filter-section">
+      <div class="filter-group">
+        <h3>Filter by Age</h3>
+        <div class="filter-controls">
+          <input id="age-filter" type="number" placeholder="Enter age..." min="0" max="100">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <h3>Filter by ID Range</h3>
+        <div class="filter-controls">
+          <input id="id-min-filter" type="number" placeholder="Min ID..." min="1">
+          <input id="id-max-filter" type="number" placeholder="Max ID..." min="1">
+        </div>
+      </div>
+
+      <div class="filter-actions">
+        <button id="apply-filters-btn">Apply Filters</button>
+        <button id="reset-filters-btn">Reset Filters</button>
+      </div>
+    </div>
+
+    <div id="log-area" class="log">
+    </div>
+
+    <div class="grid">
+
+      <div>
+        <h2 class="section-title">Search Results</h2>
+        <table id="filtered-users-table">
+          <tr><th>ID</th><th>Name</th><th>Age</th></tr>
+          <tr><td colspan="3">No results yet.</td></tr>
+        </table>
+      </div>
+
+      <div>
+        <h2 class="section-title">All Users</h2>
+        <table id="all-users-table">
+          <tr><th>ID</th><th>Name</th><th>Age</th></tr>
+          <tr><td>1</td><td>Example</td><td>25</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

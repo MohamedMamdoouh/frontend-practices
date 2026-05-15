@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Cookie Demo</h2>
+
+      <input id="nameBox" type="text" placeholder="Enter your name" />
+      <input id="colorBox" type="text" placeholder="Enter your color" />
+
+      <button onclick="saveCookies()">Save Cookies</button>
+      <button onclick="readSpecificCookies()">Read Saved Cookie</button>
+      <button onclick="deleteCookies()">Delete Cookies</button>
+
+      <div id="result"></div>
+    </div>
+  </body>
+</html>

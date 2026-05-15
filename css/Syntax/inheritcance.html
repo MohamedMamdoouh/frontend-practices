@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Inheritance Example</title>
+    <style>
+        .parent {
+            color: darkblue;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            border: 2px solid #ccc;
+        }
+
+        .child {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <h1>Welcome to Our Website!</h1>
+        <p style="border: inherit;" class="child">This text inherits the color and font-family from its parent element.
+            Also, it inherits border as we used 'inherit' keyword.
+        </p>
+    </div>
+</body>
+
+</html>

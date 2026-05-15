@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            color: #333;
+            font-size: 16px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #ccc;
+        }
+
+        #unique {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: yellow;
+            display: inline-block;
+        }
+
+        [title] {
+            border: 2px dashed green;
+            padding: 5px;
+        }
+
+        p::first-line {
+            font-weight: bold;
+        }
+
+        div span {
+            color: purple;
+            font-style: italic;
+        }
+
+        h2+p {
+            color: darkred;
+        }
+
+        h2~p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selectors in Action!</h1>
+
+    <p>This is a normal paragraph styled using an element selector.</p>
+    <p class="highlight">This paragraph is highlighted using a class selector.</p>
+    <p id="unique">This paragraph is uniquely styled using an ID selector.</p>
+
+    <input type="text" placeholder="type here">
+    <br><br>
+    <a href="#">Hover over this link</a>
+    <br> <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div title="Information Box">
+        <p>This div has a title attribute and thus gets a dashed green border. It demonstrates the attribute selector.
+        </p>
+        <span>This span is targeted by the descendant selector (div span) and appears in purple italics.</span>
+    </div>
+
+    <div class="container">
+        <p>This paragraph is a direct child of a container div, so it receives specific styling (blue border and
+            padding).</p>
+        <p>Another directly nested paragraph in the container with the same styling.</p>
+    </div>
+
+    <h2>Section Header</h2>
+    <p>This paragraph is immediately after an <code><h2></code> element, so it's styled with dark red text (adjacent
+        sibling selector).</p>
+    <p>This paragraph is a sibling of the <code><h2></code> but not immediately adjacent, so it gets a smaller font size
+        (general sibling selector).</p>
+</body>
+
+</html>
