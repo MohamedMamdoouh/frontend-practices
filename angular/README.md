@@ -1,6 +1,6 @@
 # Angular Examples
 
-Angular workspace containing demo applications and unit testing examples.
+Angular workspace containing demo applications and unit testing examples covering most Angular concepts, core features, and practical scenarios that a junior Angular developer is expected to know and build.
 
 ## Contents
 
