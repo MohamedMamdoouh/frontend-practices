@@ -1,6 +1,6 @@
 # JavaScript Practical Applications
 
-Collection of real-world JavaScript examples and browser-based application patterns.
+Collection of real-world JavaScript examples and browser-based application patterns from Programming Advices course.
 
 ## Contents
 
